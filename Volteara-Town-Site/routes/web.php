@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/face', function () {
     return view('welcome');
 });
 Route::get('/user', 'UserController@index');
@@ -21,5 +21,5 @@ route::get('/dev', function () {
 	return view('dev.welcome');
 	});
 Route::get('/d', function () {
-    return view('d');
+    return view('dev.welcome');
 });
