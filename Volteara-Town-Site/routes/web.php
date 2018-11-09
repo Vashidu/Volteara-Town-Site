@@ -11,22 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/face', function () {
     return view('welcome');
 });
 Route::get('/user', 'UserController@index');
 //Route::get('/login', 'LoginController');
 //Route::get('/register', 'Auth\RegisterController');
-
-
+route::get('/dev', function () {
+	return view('dev.welcome');
+	});
 Route::get('/d', function () {
-    $tasks = [
-        'Create basic layout',
-        'Create User panel',
-        'Create post management between user auth and guest'
-    ];
-    
-    return view('d', [
-        'tasks' => $tasks
-    ]);
+    return view('dev.welcome');
 });
