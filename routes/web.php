@@ -17,9 +17,16 @@ Route::get('/', function () {
 Route::get('/user', 'UserController@index');
 //Route::get('/login', 'LoginController');
 //Route::get('/register', 'Auth\RegisterController');
-route::get('/dev', function () {
-	return view('dev.welcome');
-	});
+
+
 Route::get('/d', function () {
-    return view('d');
+    $tasks = [
+        'Create basic layout',
+        'Create User panel',
+        'Create post management between user auth and guest'
+    ];
+    
+    return view('d', [
+        'tasks' => $tasks
+    ]);
 });
