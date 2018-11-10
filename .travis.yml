@@ -1,0 +1,33 @@
+language: php
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+php:
+  - 7.2
+
+env:
+  matrix:
+  - LARAVEL=5.7.* TESTBENCH=3.7.* PHPUNIT=7.3.*
+
+matrix:
+  exclude:
+    - php: 7.2
+      env: LARAVEL=5.0.* TESTBENCH=3.0.* PHPUNIT=4.8.*
+
+before_install:
+  - composer self-update --stable --no-interaction
+  - composer remove friendsofphp/php-cs-fixer --dev --no-update
+  - composer require laravel/framework:$LARAVEL illuminate/support:$LARAVEL orchestra/testbench:$TESTBENCH phpunit/phpunit:$PHPUNIT --no-update --no-interaction --dev
+
+install:
+  - travis_retry composer install --no-suggest --no-interaction
+  - composer info
+
+script:
+  - composer tests-travis
+  - composer require friendsofphp/php-cs-fixer ^2.2 --dev
+  - composer phpcs
