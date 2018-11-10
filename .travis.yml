@@ -28,6 +28,6 @@ install:
   - composer info
 
 script:
-  - composer tests-travis
-  - composer require friendsofphp/php-cs-fixer ^2.2 --dev
-  - composer phpcs
+  - php artisan migrate:fresh
+  - ./vendor/bin/phpunit tests/Feature/ExampleTest.php 
+  - ./vendor/bin/phpunit tests/Feature/basictest.php 
