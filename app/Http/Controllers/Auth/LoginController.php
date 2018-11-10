@@ -2,8 +2,8 @@
 
 namespace volteara\Http\Controllers\Auth;
 
-use volteara\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use volteara\Http\Controllers\Controller;
 
 class LoginController extends Controller
 {
