@@ -15,7 +15,12 @@ class CreateHeraldsTable extends Migration
     {
         Schema::create('heralds', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->timestamps('created_at');
+            $table->tinytext('title');
+            $table->tinytext('descr');
+            $table->timestamps('updated_at');
+            $table->tinytext('author');
+            $table->text('herald');
         });
     }
 
