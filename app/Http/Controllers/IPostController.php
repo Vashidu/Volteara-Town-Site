@@ -3,13 +3,13 @@
 namespace volteara\Http\Controllers;
 
 use Illuminate\Http\Request;
-use volteara\Post;
+use volteara\IPost;
 
-class PostController extends Controller
+class IPostController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $posts = IPost::all();
                 
         return view('posts.index', compact('posts'));
     }
