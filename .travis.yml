@@ -28,6 +28,7 @@ install:
   - composer info
 
 script:
+  - php artisan key:generate --force
   - php artisan migrate --force
   - ./vendor/bin/phpunit tests/Feature/ExampleTest.php 
   - ./vendor/bin/phpunit tests/Feature/basictest.php 
