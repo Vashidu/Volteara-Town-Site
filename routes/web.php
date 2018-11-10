@@ -22,8 +22,7 @@
 
 Route::get('/', 'PagesController@home');
 
-
-Route::get ('/d', 'PagesController@devlog');
+Route::get('/d', 'PagesController@devlog');
 
 Auth::routes();
 
@@ -34,6 +33,5 @@ Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
 
 Route::resource('heralds', 'HeraldController');
