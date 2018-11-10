@@ -12,9 +12,9 @@
   <h1 class="display-3">{{ $post->title }}</h1>
   <p class="lead">{{ $post->created_at }}</p>
   <hr class="my-4">
-  <p>{{ $post->short_description }}</p>
+  <p>{{ $post->descr }}</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="/post/{{ $post->id }}" role="button">Read More</a>
+    <a class="btn btn-primary btn-lg" href="/heralds/{{ $post->id }}" role="button">Read More</a>
   </p>
 </div>
 @endforeach

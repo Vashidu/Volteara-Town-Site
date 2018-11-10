@@ -40,10 +40,10 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="/posts">Posts</a>
+                                <a class="nav-link" href="/heralds">Town Herald</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/d') }}">Dev</a>
+                                <a class="nav-link" href="{{ url('/d') }}">Change Log</a>
                             </li>
                         @endguest
                     </ul>

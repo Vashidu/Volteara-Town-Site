@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('title', 'Task List')
+@section('title', 'Change Log')
 @section('content')
-<h1 class="row justify-content-center">The rough todo list</h1>
+<h1 class="row justify-content-center">Change Log</h1>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

@@ -13,7 +13,8 @@ class PagesController extends Controller
         $tasks = [
         '√ Create basic layout',
         '√ Create User panel',
-        'Create post management between user auth and guest'
+        '√ Create post management between user auth and guest',
+        'Create post page with use of database posts'
     ];
     
     return view('d', [

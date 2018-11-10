@@ -13,4 +13,9 @@ class HeraldController extends Controller
                 
         return view('heralds.index', compact('heralds'));
     }
+    public function show(Herald $herald)
+    {
+        //return compact('herald');
+        return view('heralds.show', compact('herald'));
+    }
 }

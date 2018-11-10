@@ -10,10 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'PagesController@home');
+/*
 
-//Route::get('/login', 'LoginController');
-//Route::get('/register', 'Auth\RegisterController');
+    Get / (index)
+    GET /d (devlog)
+    GET /home (authenticated home user control panel)
+    GET /admin (admin BREAD panel)
+    GET /posts (herald index)
+    GET /post/1 (herald show)
+*/
+
+Route::get('/', 'PagesController@home');
 
 
 Route::get ('/d', 'PagesController@devlog');
@@ -24,14 +31,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/blog', 'PagesController@home');
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('posts', 'HeraldController@index');
+
+Route::resource('heralds', 'HeraldController');
