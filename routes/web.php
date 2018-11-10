@@ -33,3 +33,5 @@ Route::get('/blog', 'PagesController@home');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('posts', 'PostController@index');
