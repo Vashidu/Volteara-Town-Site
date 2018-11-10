@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace volteara\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

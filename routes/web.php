@@ -11,25 +11,12 @@
 |
 */
 Route::get('/', 'PagesController@home');
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-Route::get('/user', 'UserController@index');
+
 //Route::get('/login', 'LoginController');
 //Route::get('/register', 'Auth\RegisterController');
 
 
-Route::get('/d', function () {
-    $tasks = [
-        'Create basic layout',
-        'Create User panel',
-        'Create post management between user auth and guest'
-    ];
-    
-    return view('d', [
-        'tasks' => $tasks
-    ]);
-});
+Route::get ('/d', 'PagesController@devlog');
 
 Auth::routes();
 
@@ -38,3 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/blog', 'PagesController@home');
