@@ -6,7 +6,7 @@
 @guest
 <h1>Not logged in!</h1>
 @else
-@foreach ($posts as $post)
+@foreach ($heralds as $post)
 
 <div class="jumbotron">
   <h1 class="display-3">{{ $post->title }}</h1>
