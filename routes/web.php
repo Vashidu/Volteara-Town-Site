@@ -34,4 +34,4 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('posts', 'IPostController@index');
+Route::get('posts', 'HeraldController@index');
