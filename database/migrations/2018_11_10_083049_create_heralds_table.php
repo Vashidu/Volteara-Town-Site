@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Heralds extends Migration
+class CreateHeraldsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,10 @@ class Heralds extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('heralds', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class Heralds extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('heralds');
     }
 }
